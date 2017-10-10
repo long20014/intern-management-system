@@ -1,0 +1,19 @@
+/* line 1, ../scss/themes/_header.scss */
+#header {
+  margin: 15px 20px;
+}
+
+/* line 5, ../scss/themes/_header.scss */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+/* line 11, ../scss/themes/_header.scss */
+.login-bar {
+  margin: 0 auto;
+  background-color: blue;
+  width: 1000px;
+  height: 100px;
+}

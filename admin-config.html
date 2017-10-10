@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Home</title>
+  	<link href="css/style.css" rel="stylesheet" >
+  	<link href="css/bootstrap.min.css" rel="stylesheet" >
+</head>
+
+<body>
+	<header id="header" class="container">
+		<div class="login-bar">
+			<button class="btn btn-large btn-info" style="float:right; margin: 25px 15px;">Login</button>
+		</div>
+	</header>
+
+	<section>
+		<button onclick="document.getElementById('add-user').style.display='block'" class="btn btn-large btn-info">Add new user</button>
+
+		<div class="container">
+			<form>
+				<select name="cars" multiple>
+				  <option value="volvo">Volvo</option>
+				  <option value="saab">Saab</option>
+				  <option value="opel">Opel</option>
+				  <option value="audi">Audi</option>
+				</select>
+				<button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary">edit</button>
+			</form>
+
+			<form id="edit-user" action="/action_page.php">
+				<div class="container">
+			        <label><b>Username</b></label>
+			        <input type="text" placeholder="Enter Username" name="username" required>
+
+			        <label><b>Username</b></label>
+			        <input type="text" placeholder="Enter Username" name="username" required>
+
+			        <label><b>Password</b></label>
+			        <input type="password" placeholder="Enter Password" name="psw" required>
+
+			        <button class="btn btn-danger">disable</button>
+			        
+			        <button type="submit">Login</button>
+			    </div>
+			</form>
+		</div>
+
+		
+			
+		
+
+	</section>
+</body>
+</html>
