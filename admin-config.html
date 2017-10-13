@@ -10,15 +10,19 @@
   	<link href="css/bootstrap.min.css" rel="stylesheet" >
 </head>
 
-<body>
-	<header id="header" class="container">
+<body class="own-style own-margin">
+	<header id="header" class="container-fluid">
 		<div class="login-bar">
-			<button class="btn btn-large btn-info" style="float:right; margin: 25px 15px;">Login</button>
+			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
+			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Login</button>
 		</div>
 	</header>
 
 	<section>
-		<button onclick="document.getElementById('add-user').style.display='block'" class="btn btn-large btn-info">Add new user</button>
+		<div>
+			<button onclick="document.getElementById('add-user').style.display='block'" class="btn btn-large btn-info">Add new user</button>
+			<p class="m-0"><input class="input input-sm radius-5 color-white mb-20" placeholder="Username" type="text" required></p>
+		</div>		
 
 		<div class="container">
 			<form>
@@ -28,31 +32,55 @@
 				  <option value="opel">Opel</option>
 				  <option value="audi">Audi</option>
 				</select>
-				<button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary">edit</button>
-			</form>
-
-			<form id="edit-user" action="/action_page.php">
-				<div class="container">
-			        <label><b>Username</b></label>
-			        <input type="text" placeholder="Enter Username" name="username" required>
-
-			        <label><b>Username</b></label>
-			        <input type="text" placeholder="Enter Username" name="username" required>
-
-			        <label><b>Password</b></label>
-			        <input type="password" placeholder="Enter Password" name="psw" required>
-
-			        <button class="btn btn-danger">disable</button>
-			        
-			        <button type="submit">Login</button>
-			    </div>
-			</form>
+				<p><button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary">edit</button></p>
+			</form>		
 		</div>
 
-		
+		<div id="edit-user" class="modal1">
+			<form class="radius-5 form-modified animate" action="/action_page.php">
+				<div class="text-center mb-30" >
+					<h2 class="font-w-300 fs-42 color-white ">Edit User</h2>
+					<p class="text-center color-gray fs-17 line-h ">Process results from a change in the energy level of the nucleus</p>			
+				</div>
+			  	
+			  	<p class="m-0"><input class="input input-sm w-full radius-5 color-white mb-20" placeholder="Username" type="text" disabled></p>
+			  	
+				<p class="m-0"><input class="input input-sm w-full radius-5 color-white	mb-20" placeholder="Password" type="password" required></p>
+
+				<p class="m-0">Deadline: <input type="date" name="bday"></p>
+
+				<div class="mb-20">
+					<label class="checkbox">
+					  <input type="checkbox">
+					  <span></span>
+						Disable user
+					</label>
+					<div class="row mt-20">
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-sm btn-primary radius-5" style="width:150px;">Save</button>
+						</div>
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-sm btn-primary radius-5" style="width:150px;">Cancel</button>
+						</div>
+					</div>						
+				</div>		  		  			  	
+			</form>
+		</div>
 			
 		
 
 	</section>
+
+	<script>
+	// Get the modal
+	var modal1 = document.getElementById('edit-user');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal1) {
+	        modal1.style.display = "none";
+	    }
+	}
+	</script>
 </body>
 </html>

@@ -1,0 +1,170 @@
+@import "helpers/mixins"; 
+@import "helpers/variables"; 
+
+.own-style {
+	.container {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 15px 0 ;
+	}
+
+	.container-fluid {
+		position: relative;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 0 ;
+	}
+
+	.login-bar {
+		margin: 0 auto;
+		background-color: #dedede;
+		width: 100%;
+		height: 50px;
+	}
+	
+	.choice {
+		:hover {
+			border: 2px solid #61b1f6;
+			box-shadow: inset 0 2px 2px rgba(0,0,0,.075), 0 0 8px #67b168;
+		}
+
+		a:hover {
+			border: none;
+			box-shadow: none;
+		}
+	} 
+
+	/* Full-width input fields */
+	
+
+	/* Set a style for all buttons */
+	
+	button:hover {
+	    opacity: 0.8;
+	}
+
+	/* Extra styles for the cancel button */
+	
+
+	/* Center the image and position the close button */
+	
+	span.psw {
+	    float: right;
+	    padding-top: 16px;
+	}
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	    padding-top: 60px;
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button (x) */
+	.close {
+	    position: absolute;
+	    right: 25px;
+	    top: 0;
+	    color: #000;
+	    font-size: 35px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: red;
+	    cursor: pointer;
+	}
+
+	/* Add Zoom Animation */
+	.animate {
+	    -webkit-animation: animatezoom 0.6s;
+	    animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+	    from {-webkit-transform: scale(0)} 
+	    to {-webkit-transform: scale(1)}
+	}
+	    
+	@keyframes animatezoom {
+	    from {transform: scale(0)} 
+	    to {transform: scale(1)}
+	}
+
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+	    span.psw {
+	       display: block;
+	       float: none;
+	    }
+	    .cancelbtn {
+	       width: 100%;
+	    }
+	}
+
+	.form-modified {
+    background-color:#131720;
+    margin: 0 auto;
+    max-width:400px;
+    padding:50px 40px;
+  }
+
+  .input-sm {
+    background-color:rgba(0,0,0,0.0);
+    border-color:#282D36;
+  }
+
+  .btn-primary {
+  	background-color: $colorPrimary;
+  }
+
+  .color-white      { color: white; }
+  .color-black      { color: #575757; }  
+  .color-gray       { color: #777; }
+  .color-light-gray { color: #e7e7e7; }
+  .color-cyan       { color: #34d2ff; }
+  .color-primary    { color: $colorPrimary; }
+
+  .font-w-300 { font-weight:300; }
+  .font-w-400 { font-weight:400; }
+  .font-w-500 { font-weight:500; }
+  .font-w-600 { font-weight:600; }
+  .font-w-700 { font-weight:700; }
+
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   #777;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #777;
+   opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #777;
+   opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #777;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #777;
+  }  
+}

@@ -1,19 +1,519 @@
-/* line 1, ../scss/themes/_header.scss */
-#header {
-  margin: 15px 20px;
+/* line 4, ../scss/themes/_own-style.scss */
+.own-style {
+  /* Full-width input fields */
+  /* Set a style for all buttons */
+  /* Extra styles for the cancel button */
+  /* Center the image and position the close button */
+  /* The Modal (background) */
+  /* Modal Content/Box */
+  /* The Close Button (x) */
+  /* Add Zoom Animation */
+  /* Change styles for span and cancel button on extra small screens */
 }
-
-/* line 5, ../scss/themes/_header.scss */
-.container {
+/* line 5, ../scss/themes/_own-style.scss */
+.own-style .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px 0;
 }
-
-/* line 11, ../scss/themes/_header.scss */
-.login-bar {
+/* line 12, ../scss/themes/_own-style.scss */
+.own-style .container-fluid {
+  position: relative;
+  max-width: 100%;
   margin: 0 auto;
-  background-color: blue;
-  width: 1000px;
-  height: 100px;
+  padding: 0 0;
+}
+/* line 19, ../scss/themes/_own-style.scss */
+.own-style .login-bar {
+  margin: 0 auto;
+  background-color: #dedede;
+  width: 100%;
+  height: 50px;
+}
+/* line 27, ../scss/themes/_own-style.scss */
+.own-style .choice :hover {
+  border: 2px solid #61b1f6;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #67b168;
+}
+/* line 32, ../scss/themes/_own-style.scss */
+.own-style .choice a:hover {
+  border: none;
+  box-shadow: none;
+}
+/* line 43, ../scss/themes/_own-style.scss */
+.own-style button:hover {
+  opacity: 0.8;
+}
+/* line 52, ../scss/themes/_own-style.scss */
+.own-style span.psw {
+  float: right;
+  padding-top: 16px;
+}
+/* line 58, ../scss/themes/_own-style.scss */
+.own-style .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+/* line 73, ../scss/themes/_own-style.scss */
+.own-style .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+/* line 81, ../scss/themes/_own-style.scss */
+.own-style .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+/* line 90, ../scss/themes/_own-style.scss */
+.own-style .close:hover,
+.own-style .close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* line 97, ../scss/themes/_own-style.scss */
+.own-style .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 300px) {
+  /* line 114, ../scss/themes/_own-style.scss */
+  .own-style span.psw {
+    display: block;
+    float: none;
+  }
+  /* line 118, ../scss/themes/_own-style.scss */
+  .own-style .cancelbtn {
+    width: 100%;
+  }
+}
+/* line 123, ../scss/themes/_own-style.scss */
+.own-style .form-modified {
+  background-color: #131720;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 50px 40px;
+}
+/* line 130, ../scss/themes/_own-style.scss */
+.own-style .input-sm {
+  background-color: transparent;
+  border-color: #282D36;
+}
+/* line 135, ../scss/themes/_own-style.scss */
+.own-style .btn-primary {
+  background-color: #F8AD1A;
+}
+/* line 139, ../scss/themes/_own-style.scss */
+.own-style .color-white {
+  color: white;
+}
+/* line 140, ../scss/themes/_own-style.scss */
+.own-style .color-black {
+  color: #575757;
+}
+/* line 141, ../scss/themes/_own-style.scss */
+.own-style .color-gray {
+  color: #777;
+}
+/* line 142, ../scss/themes/_own-style.scss */
+.own-style .color-light-gray {
+  color: #e7e7e7;
+}
+/* line 143, ../scss/themes/_own-style.scss */
+.own-style .color-cyan {
+  color: #34d2ff;
+}
+/* line 144, ../scss/themes/_own-style.scss */
+.own-style .color-primary {
+  color: #F8AD1A;
+}
+/* line 146, ../scss/themes/_own-style.scss */
+.own-style .font-w-300 {
+  font-weight: 300;
+}
+/* line 147, ../scss/themes/_own-style.scss */
+.own-style .font-w-400 {
+  font-weight: 400;
+}
+/* line 148, ../scss/themes/_own-style.scss */
+.own-style .font-w-500 {
+  font-weight: 500;
+}
+/* line 149, ../scss/themes/_own-style.scss */
+.own-style .font-w-600 {
+  font-weight: 600;
+}
+/* line 150, ../scss/themes/_own-style.scss */
+.own-style .font-w-700 {
+  font-weight: 700;
+}
+/* line 153, ../scss/themes/_own-style.scss */
+.own-style ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #777;
+}
+/* line 156, ../scss/themes/_own-style.scss */
+.own-style :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #777;
+  opacity: 1;
+}
+/* line 160, ../scss/themes/_own-style.scss */
+.own-style ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #777;
+  opacity: 1;
+}
+/* line 164, ../scss/themes/_own-style.scss */
+.own-style :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #777;
+}
+/* line 167, ../scss/themes/_own-style.scss */
+.own-style ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #777;
+}
+
+/* line 1, ../scss/themes/_padding-margin.scss */
+.own-margin {
+  /*-----------------------------------*\
+  * -MARGIN-
+  \*-----------------------------------*/
+  /*-----------------------------------*\
+  * -PADDING-
+  \*-----------------------------------*/
+}
+/* line 7, ../scss/themes/_padding-margin.scss */
+.own-margin .mlp-20 {
+  margin-left: 20%;
+}
+/* line 11, ../scss/themes/_padding-margin.scss */
+.own-margin .mrp-20 {
+  margin-right: 20%;
+}
+/* line 15, ../scss/themes/_padding-margin.scss */
+.own-margin .mlrp-10 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/* line 20, ../scss/themes/_padding-margin.scss */
+.own-margin .mlrp-15 {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+/* line 25, ../scss/themes/_padding-margin.scss */
+.own-margin .mlrp-8 {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+/* line 30, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-m50 {
+  margin-top: -50px;
+}
+/* line 34, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-m20 {
+  margin-top: -20px;
+}
+/* line 38, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-m10 {
+  margin-top: -10px;
+}
+/* line 42, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-10 {
+  margin-top: 10px;
+}
+/* line 46, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-20 {
+  margin-top: 20px;
+}
+/* line 50, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-30 {
+  margin-top: 30px;
+}
+/* line 54, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-40 {
+  margin-top: 40px;
+}
+/* line 58, ../scss/themes/_padding-margin.scss */
+.own-margin .mt-50 {
+  margin-top: 50px;
+}
+/* line 62, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-10 {
+  margin-bottom: 10px;
+}
+/* line 66, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-20 {
+  margin-bottom: 20px;
+}
+/* line 70, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-30 {
+  margin-bottom: 30px;
+}
+/* line 74, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-40 {
+  margin-bottom: 40px;
+}
+/* line 78, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-50 {
+  margin-bottom: 50px;
+}
+/* line 82, ../scss/themes/_padding-margin.scss */
+.own-margin .mb-75 {
+  margin-bottom: 75px;
+}
+/* line 86, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* line 91, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 96, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 101, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+/* line 106, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-40 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/* line 111, ../scss/themes/_padding-margin.scss */
+.own-margin .mlr-50 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+/* line 116, ../scss/themes/_padding-margin.scss */
+.own-margin .m-20 {
+  margin: 20px;
+}
+/* line 120, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-5 {
+  margin-right: 5px;
+}
+/* line 124, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-10 {
+  margin-right: 10px;
+}
+/* line 128, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-20 {
+  margin-right: 20px;
+}
+/* line 132, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-30 {
+  margin-right: 30px;
+}
+/* line 136, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-40 {
+  margin-right: 40px;
+}
+/* line 140, ../scss/themes/_padding-margin.scss */
+.own-margin .mr-50 {
+  margin-right: 50px;
+}
+/* line 144, ../scss/themes/_padding-margin.scss */
+.own-margin .ml-10 {
+  margin-left: 10px;
+}
+/* line 148, ../scss/themes/_padding-margin.scss */
+.own-margin .ml-20 {
+  margin-left: 20px;
+}
+/* line 152, ../scss/themes/_padding-margin.scss */
+.own-margin .ml-30 {
+  margin-left: 30px;
+}
+/* line 156, ../scss/themes/_padding-margin.scss */
+.own-margin .ml-40 {
+  margin-left: 40px;
+}
+/* line 160, ../scss/themes/_padding-margin.scss */
+.own-margin .ml-50 {
+  margin-left: 50px;
+}
+/* line 172, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-m20 {
+  padding-top: -20px;
+}
+/* line 176, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-m10 {
+  padding-top: -10px;
+}
+/* line 180, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-m5 {
+  padding-top: -5px;
+}
+/* line 184, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-10 {
+  padding-top: 10px;
+}
+/* line 188, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-20 {
+  padding-top: 20px;
+}
+/* line 192, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-30 {
+  padding-top: 30px;
+}
+/* line 196, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-40 {
+  padding-top: 40px;
+}
+/* line 200, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-50 {
+  padding-top: 50px;
+}
+/* line 204, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-75 {
+  padding-top: 75px;
+}
+/* line 208, ../scss/themes/_padding-margin.scss */
+.own-margin .pt-100 {
+  padding-top: 100px;
+}
+/* line 212, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-10 {
+  padding-bottom: 10px;
+}
+/* line 216, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-20 {
+  padding-bottom: 20px;
+}
+/* line 220, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-30 {
+  padding-bottom: 30px;
+}
+/* line 224, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-40 {
+  padding-bottom: 40px;
+}
+/* line 228, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-50 {
+  padding-bottom: 50px;
+}
+/* line 232, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-75 {
+  padding-bottom: 75px;
+}
+/* line 236, ../scss/themes/_padding-margin.scss */
+.own-margin .pb-100 {
+  padding-bottom: 100px;
+}
+/* line 240, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-5 {
+  padding-left: 5px;
+}
+/* line 244, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-10 {
+  padding-left: 10px;
+}
+/* line 248, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-20 {
+  padding-left: 20px;
+}
+/* line 252, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-30 {
+  padding-left: 30px;
+}
+/* line 256, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-40 {
+  padding-left: 40px;
+}
+/* line 260, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-50 {
+  padding-left: 50px;
+}
+/* line 264, ../scss/themes/_padding-margin.scss */
+.own-margin .pl-75 {
+  padding-left: 50px;
+}
+/* line 268, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-5 {
+  padding-right: 5px;
+}
+/* line 272, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-20 {
+  padding-right: 20px;
+}
+/* line 276, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-30 {
+  padding-right: 30px;
+}
+/* line 280, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-40 {
+  padding-right: 40px;
+}
+/* line 284, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-50 {
+  padding-right: 50px;
+}
+/* line 288, ../scss/themes/_padding-margin.scss */
+.own-margin .pr-75 {
+  padding-right: 75px;
+}
+/* line 292, ../scss/themes/_padding-margin.scss */
+.own-margin .plr-5 {
+  padding-left: 5px;
+  padding-right: 5xpx;
+}
+/* line 297, ../scss/themes/_padding-margin.scss */
+.own-margin .plr-10 {
+  padding-left: 10px;
+  padding-right: 10xpx;
+}
+/* line 302, ../scss/themes/_padding-margin.scss */
+.own-margin .plr-15 {
+  padding-left: 15px;
+  padding-right: 15xpx;
 }

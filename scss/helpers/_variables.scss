@@ -1,0 +1,45 @@
+
+$colorPrimary: #F8AD1A ;
+$colorSecondary: #313131 ;
+
+
+
+// Text link colors
+$colorLink: #f00 ;
+$colorLinkHover: #f00 ;
+
+
+$fontPrimary: 'Roboto', sans-serif ;
+$fontSecondary: 'Taviraj', serif ;
+
+
+
+// General colors
+$colorBody: #fafafa ;
+$colorTextBody: #777 ;
+$fontWeightBody: 300;
+$base_size:14px;
+
+
+
+$btn : 50px;
+$btn_pd : 30px;
+$btn_size : 12px;
+$btn_bd: #dcdcdc;
+$btn_cl : #666;
+
+$btnXl : $btn + 20;
+$btnXl_pd : $btn_pd + 12;
+$btnXl_size : $btn_size + 3;
+
+$btnLg : $btn + 10;
+$btnLg_pd : $btn_pd + 6;
+$btnLg_size : $btn_size + 2;
+
+$btnSm : $btn - 10;
+$btnSm_pd : $btn_pd - 6;
+$btnSm_size : $btn_size - 1;
+
+$btnXs : $btn - 20;
+$btnXs_pd : $btn_pd - 12;
+$btnXs_size : $btn_size - 2;

@@ -1,0 +1,83 @@
+
+@mixin visuallyHidden {  clip: rect(0 0 0 0);  clip: rect(0, 0, 0, 0);  overflow: hidden;  position: absolute;  height: 1px;  width: 1px;}
+@mixin prefix($property, $value) {  -webkit-#{$property}: #{$value};  -moz-#{$property}: #{$value};  -ms-#{$property}: #{$value};  -o-#{$property}: #{$value};  #{$property}: #{$value};}
+@mixin transition($value) {  transition: all $value ease-in-out;  -webkit-transition: all $value ease-in-out;}
+@mixin transitionC($value1, $value2) {  transition: all $value1 ease-in-out $value2;  -webkit-transition: all $value1 ease-in-out $value2;}
+@mixin translate($x,$y) {  transform: translate($x,$y);  -webkit-transform: translate($x,$y);}
+@mixin translateX($x) {  transform: translateX($x);  -webkit-transform: translateX($x);}
+@mixin translateY($y) {  transform: translateY($y);  -webkit-transform: translateY($y);}
+@mixin rotate($value) {  transform: rotate($value);  -webkit-transform: rotate($value);}
+@mixin gradient($rightom, $to, $fallback) {  background: $fallback;  background: -moz-linear-gradient(top, $rightom 0%, $to 100%);  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$rightom), color-stop(100%,$to));  background: -webkit-linear-gradient(top, $rightom 0%,$to 100%);  background: -o-linear-gradient(top, $rightom 0%,$to 100%);  background: -ms-linear-gradient(top, $rightom 0%,$to 100%);  background: linear-gradient(top bottom, $rightom 0%,$to 100%);}
+@mixin gradient2($rightom, $fallback) {  background-color: $fallback;  background-repeat: repeat-x;  background-image: -khtml-gradient(linear, left top, left bottom, from($rightom), to($fallback));  background-image: -moz-linear-gradient(top, $rightom, $fallback);  background-image: -ms-linear-gradient(top, $rightom, $fallback);  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $rightom), color-stop(100%, $fallback));  background-image: -webkit-linear-gradient(top, $rightom, $fallback);  background-image: -o-linear-gradient(top, $rightom, $fallback);  background-image: linear-gradient(top, $rightom, $fallback);  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$rightom', endColorstr='$fallback', GradientType=0); }
+@mixin backface($visibility: hidden) {  @include prefix('backface-visibility', #{$visibility});}
+@mixin box-sizing($box-sizing: border-box) {  -webkit-box-sizing: #{$box-sizing};  -moz-box-sizing: #{$box-sizing};  box-sizing: #{$box-sizing};}
+@mixin animation($animation) {  -webkit-animation: $animation;  -moz-animation:    $animation;  -o-animation:      $animation;  animation:         $animation;}
+
+
+$res_only_pc : "only screen and (min-width: 1200px)";
+$res_all_device : "only screen and  (max-width: 1999px)";
+$res_991 : "only screen and  (max-width: 991px)";
+$res_md : "only screen and  (min-width: 992px)";
+$res_only_tablet : "only screen and (min-width: 768px) and (max-width: 1199px)";
+$res_tablet_large : "only screen and (min-width: 992px) and (max-width: 1199px)";
+$res_tablet_small : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_only_mobile : "only screen and  (max-width: 767px)";
+$res_mobile_large : "only screen and (min-width: 481px) and (max-width: 767px)";
+$res_mobile_small : "only screen and (max-width: 480px)";
+
+
+
+ 
+@mixin res_only_pc() {
+    @media #{$res_only_pc} {
+        @content;
+    }
+}
+@mixin res_all_device() {
+    @media #{$res_all_device} {
+        @content;
+    }
+}
+@mixin res_991() {
+    @media #{$res_991} {
+        @content;
+    }
+}
+
+@mixin res_md() {
+    @media #{$res_md} {
+        @content;
+    }
+}
+
+
+@mixin res_only_tablet() {
+    @media #{$res_only_tablet} {
+        @content;
+    }
+}
+@mixin res_tablet_large() {
+    @media #{$res_tablet_large} {
+        @content;
+    }
+}
+@mixin res_tablet_small() {
+    @media #{$res_tablet_small} {
+        @content;
+    }
+}
+@mixin res_only_mobile() {
+    @media #{$res_only_mobile} {
+        @content;
+    }
+}
+@mixin res_mobile_large() {
+    @media #{$res_mobile_large} {
+        @content;
+    }
+}
+@mixin res_mobile_small() {
+    @media #{$res_mobile_small} {
+        @content;
+    }
+}
