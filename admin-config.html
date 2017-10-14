@@ -19,21 +19,40 @@
 	</header>
 
 	<section>
-		<div>
-			<button onclick="document.getElementById('add-user').style.display='block'" class="btn btn-large btn-info">Add new user</button>
-			<p class="m-0"><input class="input input-sm radius-5 color-white mb-20" placeholder="Username" type="text" required></p>
-		</div>		
-
 		<div class="container">
-			<form>
-				<select name="cars" multiple>
-				  <option value="volvo">Volvo</option>
-				  <option value="saab">Saab</option>
-				  <option value="opel">Opel</option>
-				  <option value="audi">Audi</option>
-				</select>
-				<p><button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary">edit</button></p>
-			</form>		
+			<div class="row">
+				<div class="col-md-4">
+
+				</div>
+				
+				<div class="col-md-8">
+					<form style="max-width: 400px">
+						<p class="text-center"><input id="newCompanyUser" class="input input-sm radius-5 color-gray" placeholder="Username" type="text" required></p>
+						<p class="text-center"><button onclick="addUserCompany()" class="btn btn-large btn-info radius-5 mt-10">Add new user</button></p>
+					</form>					
+					
+					
+					<form class="mt-20" style="max-width: 400px;">
+						<select id="companyUserSelect" size="8" style="width: 400px">
+						  <option value="volvo">FPT</option>
+						  <option value="saab">VNG</option>
+						  <option value="opel">MangoAds</option>
+						  <option value="audi">Intel</option>
+						</select>
+						
+						<div class="row">
+							<div class="col-md-6">
+								<p class="text-center"><button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">edit</button></p>
+							</div>
+
+							<div class="col-md-6">
+								<p class="text-center"><button onclick="document.getElementById('remove-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">remove</button></p>
+							</div>
+						</div>
+						
+					</form>		
+				</div>	
+			</div>
 		</div>
 
 		<div id="edit-user" class="modal1">
@@ -80,6 +99,13 @@
 	    if (event.target == modal1) {
 	        modal1.style.display = "none";
 	    }
+	}
+
+	function addUserCompany() {
+	    var x = document.getElementById("companyUserSelect");
+	    var option = document.createElement("option");
+	    option.text = document.getElementById("newCompanyUser").value;
+	    x.add(option);
 	}
 	</script>
 </body>
