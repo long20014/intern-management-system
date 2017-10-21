@@ -5,9 +5,11 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  	<title>BK Intern management system - Home</title>
+  	<title>BK Intern management system - Admin</title>
   	<link href="css/style.css" rel="stylesheet" >
-  	<link href="css/bootstrap.min.css" rel="stylesheet" >
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/fontawesome.min.css" rel="stylesheet">
+  	<link href="css/nav_dropdown.css" rel="stylesheet" type="text/css" >
 </head>
 
 <body class="own-style own-margin">
@@ -18,7 +20,7 @@
 		</div>
 	</header>
 
-	<section>
+	<!--<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -28,7 +30,7 @@
 				<div class="col-md-8">
 					<form style="max-width: 400px">
 						<p class="text-center"><input id="newCompanyUser" class="input input-sm radius-5 color-gray" placeholder="Username" type="text" required></p>
-						<p class="text-center"><button onclick="addUserCompany()" class="btn btn-large btn-info radius-5 mt-10">Add new user</button></p>
+						<p class="text-center"><button type="button" onclick="addUserCompany()" class="btn btn-large btn-info radius-5 mt-10">Add new user</button></p>
 					</form>					
 					
 					
@@ -42,11 +44,11 @@
 						
 						<div class="row">
 							<div class="col-md-6">
-								<p class="text-center"><button onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">edit</button></p>
+								<p class="text-center"><button type="button" onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">edit</button></p>
 							</div>
 
 							<div class="col-md-6">
-								<p class="text-center"><button onclick="document.getElementById('remove-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">remove</button></p>
+								<p class="text-center"><button type="button" onclick="removeUserCompany()" class="btn btn-primary radius-5 mt-10" style="width: 150px;">remove</button></p>
 							</div>
 						</div>
 						
@@ -55,7 +57,7 @@
 			</div>
 		</div>
 
-		<div id="edit-user" class="modal1">
+		<div id="edit-user" class="modal">
 			<form class="radius-5 form-modified animate" action="/action_page.php">
 				<div class="text-center mb-30" >
 					<h2 class="font-w-300 fs-42 color-white ">Edit User</h2>
@@ -76,23 +78,273 @@
 					</label>
 					<div class="row mt-20">
 						<div class="col-sm-6">
-							<button type="submit" class="btn btn-sm btn-primary radius-5" style="width:150px;">Save</button>
+							<button type="button" onclick="" class="btn btn-sm btn-primary radius-5" style="width:150px;">Save</button>
 						</div>
 						<div class="col-sm-6">
-							<button type="submit" class="btn btn-sm btn-primary radius-5" style="width:150px;">Cancel</button>
+							<button type="button" onclick="document.getElementById('edit-user').style.display='none'" class="btn btn-sm btn-primary radius-5" style="width:150px;">Cancel</button>
 						</div>
 					</div>						
 				</div>		  		  			  	
 			</form>
 		</div>
-			
-		
+	</section>-->
+	<!-------Popover button template------>
+	<div style="display: none" id="btnMenu">
+		<div class="btn-group btn-group-sm" role="group" >
+			<button type="button" class="btn btn-default btnView btn-success1">View</button>
+			<button type="button" class="btn btn-default btnEdit btn-primary1">Edit</button>
+			<button type="button" class="btn btn-default btnDelete btn-danger1">Delete</button>
+		</div>
+	</div>
+	<!-------End popover button template------->
 
-	</section>
+
+	<div class="container-fluid">
+	
+	<!--------------HorizontalTabPanel-------------->
+	<div class="panel with-nav-tabs panel-info">
+		<a href="#" class="nav-tabs-dropdown btn btn-block btn-success">Tabs</a>
+		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
+			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên</a></li>
+			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Danh sách doanh nghiệp </a></li>			
+			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm người dùng</a></li>
+			<li><a href="#tab-4" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa sinh viên</a></li>
+			<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
+		</ul>
+		<div class="tab-content panel-body">
+			<!--------------Danh sach sinh vien-------------->
+			<div class="tab-pane active" role="tabpanel" id="tab-1">
+				<div class="row">
+					<div class="col-md-12">
+						<form action="app/apiBenhNhan.php?mode=search" id="frmTimBenhNhan" method="post">
+							<div class="input-group input-group form-group">
+								<div class="input-group-addon"><span>User</span></div>
+								<input class="form-control" type="text" name="txtHoten">
+								<div class="input-group-btn">
+									<button class="btn btn-xs btn-info" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr class="bg-primary">
+										<th>Số thứ tự</th>
+										<th>Username</th>
+										<th>Họ Tên</th>
+										<th>Deadline</th>										
+										<th>Enable/Disable</th>
+										<th>Ngày khởi tạo</th>
+									</tr>
+								</thead>
+								<tbody id="tableBody">
+									<tr data-toggle="popover">
+										<td>123</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+									</tr>
+									<tr data-toggle="popover">
+										<td>456</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------End_Tim_Benh_Nhan------------>
+			<!--------------danh sach doanh nghiep-------------->
+			<div class="tab-pane" role="tabpanel" id="tab-2">
+				<div class="row">
+					<div class="col-md-12">
+						<form action="app/apiBenhNhan.php?mode=search" id="frmTimBenhNhan" method="post">
+							<div class="input-group input-group form-group">
+								<div class="input-group-addon"><span>User</span></div>
+								<input class="form-control" type="text" name="txtHoten">
+								<div class="input-group-btn">
+									<button class="btn btn-xs btn-info" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr class="bg-primary">
+										<th>Số thứ tự</th>
+										<th>Username</th>
+										<th>Doanh nghiệp</th>
+										<th>Enable/Disable</th>										
+										<th>Column 1</th>
+										<th>Ngày khởi tạo</th>
+									</tr>
+								</thead>
+								<tbody id="tableBody">
+									<tr data-toggle="popover">
+										<td>123</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+									</tr>
+									<tr data-toggle="popover">
+										<td>456</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+										<td>Cell 1</td>
+										<td>Cell 2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------End_danh sach doanh nghiep------------>
+			<!--------------Them User------------>
+			<div class="tab-pane" role="tabpanel" id="tab-3" style="margin: 0 auto; max-width: 600px">
+				
+				<h3>Registration</h3>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+					<input class="form-control" type="text" style=""/>
+				</div>				
+											
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
+					<input name="" class="form-control" id="" value="" type="password">
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
+					<select style="border-radius: 0 5px 5px 0;">
+						<option>Sinh viên</option>
+						<option>Doanh nghiệp</option>	
+					</select>
+				</div>
+
+				<div class="form-group">
+					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
+					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+				</div>
+
+				<div class="form-group col-md-12">
+					<p class="text-center"><button class="btn btn-primary radius-5">Create</button></p>
+				</div>
+				
+				
+
+
+
+				<!--<div class="form-group col-lg-6">
+					<label>Repeat Password</label>
+					<input name="" class="form-control" id="" value="" type="password">
+				</div>
+								
+				<div class="form-group col-lg-6">
+					<label>Email Address</label>
+					<input name="" class="form-control" id="" value="" type="">
+				</div>
+				
+				<div class="form-group col-lg-6">
+					<label>Repeat Email Address</label>
+					<input name="" class="form-control" id="" value="" type="">
+				</div>			
+				
+				<div class="col-sm-6">
+					<input class="checkbox" type="checkbox">Sigh up for our newsletter
+				</div>
+
+				<div class="col-sm-6">
+					<input class="checkbox" type="checkbox">Send notifications to this email
+				</div>-->			
+			</div>
+		
+			<!--------------End_Them_User------------>	
+			<!--------------Sửa student------------>
+			<div class="tab-pane" role="tabpanel" id="tab-4" style="margin: 0 auto; max-width: 600px">
+				<h3>Edit student</h3>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+					<input class="form-control" type="text" style="" placeholder="" disabled>
+				</div>				
+											
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
+					<input name="" class="form-control" id="" value="" type="text">
+				</div>
+				
+				<div class="form-group">
+					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
+					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+				</div>
+
+				<div class="form-group">Deadline ứng tuyển<input type="date" name="dealine1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+
+				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+
+				<div class="form-group col-md-12">
+					<p class="text-center"><button class="btn btn-primary radius-5">Save</button></p>
+				</div>
+			</div>
+			<!--------------End sửa student------------>
+			<!--------------Sửa doanh nghiệp------------>
+			<div class="tab-pane" role="tabpanel" id="tab-5" style="margin: 0 auto; max-width: 600px">
+				<h3>Edit company</h3>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>User</span></div>
+					<input class="form-control" type="text" style="" placeholder="" disabled>
+				</div>				
+											
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Doanh nghiệp</span></div>
+					<input name="" class="form-control" id="" value="" type="text">
+				</div>
+
+				<div class="form-group">
+					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
+					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+				</div>
+
+				<div class="form-group input-group col-md-12">					
+					<textarea class="form-control" id="" style="border-radius:5px;">Thông tin doanh nghiệp</textarea>  
+				</div>
+
+				<div class="form-group col-md-12">
+					<p class="text-center"><button class="btn btn-primary radius-5">Save</button></p>
+				</div>
+			</div>
+			<!--------------End sửa student------------>						
+		</div>
+	</div>
+	<!--------------EndHorizontalTabPanel-------------->
+</div>
 
 	<script>
 	// Get the modal
-	var modal1 = document.getElementById('edit-user');
+	var modal1 = document.getElementById("edit-user");
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
@@ -103,10 +355,21 @@
 
 	function addUserCompany() {
 	    var x = document.getElementById("companyUserSelect");
-	    var option = document.createElement("option");
-	    option.text = document.getElementById("newCompanyUser").value;
-	    x.add(option);
-	}
+	    var option = document.createElement("option");	    
+	    option.text = document.getElementById("newCompanyUser").value;	   
+    	x.add(option);
+	    }
+
+	function removeUserCompany() {
+    var x = document.getElementById("companyUserSelect");
+    x.remove(x.selectedIndex);
+}
 	</script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/library.js"></script>
+	<script src="js/settings.js"></script>
+	<script src="js/dustin.js"></script>
+
 </body>
 </html>
