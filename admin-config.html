@@ -16,7 +16,7 @@
 	<header id="header" class="container-fluid">
 		<div class="login-bar">
 			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Login</button>
+			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
 		</div>
 	</header>
 
@@ -90,10 +90,20 @@
 	</section>-->
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu">
-		<div class="btn-group btn-group-sm" role="group" >
-			<button type="button" class="btn btn-default btnView btn-success1">View</button>
-			<button type="button" class="btn btn-default btnEdit btn-primary1">Edit</button>
-			<button type="button" class="btn btn-default btnDelete btn-danger1">Delete</button>
+		<div class="btn-group btn-group-xs" role="group" >
+			<button id="" type="button" class="btn btn-sm btnView btn-success1">View</button>
+			<button id="" type="button" class="btn btn-sm btnEdit btn-primary1">Edit</button>
+			<button id="delete" type="button" class="btn btn-sm btnDelete btn-danger1">Delete</button>
+		</div>
+	</div>
+	<!-------End popover button template------->
+
+	<!-------Popover button template------>
+	<div style="display: none" id="btnMenu2">
+		<div class="btn-group btn-group-xs" role="group" >
+			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">View</button>
+			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Edit</button>
+			<button id="delete" type="button" class="btn btn-sm btnDelete2 btn-danger1">Delete</button>
 		</div>
 	</div>
 	<!-------End popover button template------->
@@ -110,6 +120,8 @@
 			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm người dùng</a></li>
 			<li><a href="#tab-4" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa sinh viên</a></li>
 			<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
+			<li><a href="#tab-6" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chi tiết sinh viên</a></li>
+			<li><a href="#tab-7" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chi tiết doanh nghiệp</a></li>
 		</ul>
 		<div class="tab-content panel-body">
 			<!--------------Danh sach sinh vien-------------->
@@ -131,33 +143,36 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table table-striped table-hover table-condensed">
+							<table id="" class="table table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
 										<th>Số thứ tự</th>
 										<th>Username</th>
-										<th>Họ Tên</th>
+										<th>Họ Tên</th>										
 										<th>Deadline</th>										
 										<th>Enable/Disable</th>
-										<th>Ngày khởi tạo</th>
+										<th>Thuộc Doanh Nghiệp</th>
+										<th>Số lượng DN đăng ký</th>										
 									</tr>
 								</thead>
-								<tbody id="tableBody">
+								<tbody id="tableSV">
 									<tr data-toggle="popover">
-										<td>123</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
+										<td>001</td>
+										<td>51101111</td>
+										<td>Nguyễn Văn A</td>
+										<td>28/05/2018</td>
+										<td>Enable</td>
+										<td>Chưa có</td>
+										<td>3</td>																		
 									</tr>
 									<tr data-toggle="popover">
-										<td>456</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
 									</tr>
 								</tbody>
 							</table>
@@ -165,7 +180,7 @@
 					</div>
 				</div>
 			</div>
-			<!--------------End_Tim_Benh_Nhan------------>
+			<!--------------End danh sach sinh vien------------>
 			<!--------------danh sach doanh nghiep-------------->
 			<div class="tab-pane" role="tabpanel" id="tab-2">
 				<div class="row">
@@ -185,33 +200,33 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table table-striped table-hover table-condensed">
+							<table id="" class="table table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
 										<th>Số thứ tự</th>
 										<th>Username</th>
 										<th>Doanh nghiệp</th>
 										<th>Enable/Disable</th>										
-										<th>Column 1</th>
-										<th>Ngày khởi tạo</th>
+										<th>Số lượng SV tối đa</th>
+										<th>Số lượng SV đã nhận</th>
 									</tr>
 								</thead>
-								<tbody id="tableBody">
-									<tr data-toggle="popover">
-										<td>123</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
+								<tbody id="tableDN">
+									<tr data-toggle="popover2">
+										<td>001</td>
+										<td>vng001</td>
+										<td>VNG</td>
+										<td>Enable</td>
+										<td>43</td>
+										<td>10</td>
 									</tr>
-									<tr data-toggle="popover">
-										<td>456</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
-										<td>Cell 1</td>
-										<td>Cell 2</td>
+									<tr data-toggle="popover2">
+										<td>002</td>
+										<td>fpt001</td>
+										<td>FPT</td>
+										<td>Enable</td>
+										<td>20</td>
+										<td>19</td>
 									</tr>
 								</tbody>
 							</table>
@@ -227,17 +242,12 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
-					<input class="form-control" type="text" style=""/>
+					<input id="username" class="form-control" type="text" style=""/>
 				</div>				
-											
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
-					<input name="" class="form-control" id="" value="" type="password">
-				</div>
-
+				
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
-					<select style="border-radius: 0 5px 5px 0;">
+					<select id="userType" style="border-radius: 0 5px 5px 0;">
 						<option>Sinh viên</option>
 						<option>Doanh nghiệp</option>	
 					</select>
@@ -249,7 +259,7 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Create</button></p>
+					<p class="text-center"><button id="create" class="btn btn-primary radius-5">Create</button></p>
 				</div>
 				
 				
@@ -300,7 +310,7 @@
 					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
 				</div>
 
-				<div class="form-group">Deadline ứng tuyển<input type="date" name="dealine1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
 				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
@@ -329,18 +339,118 @@
 				</div>
 
 				<div class="form-group input-group col-md-12">					
-					<textarea class="form-control" id="" style="border-radius:5px;">Thông tin doanh nghiệp</textarea>  
+					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin doanh nghiệp</textarea>  
 				</div>
 
 				<div class="form-group col-md-12">
 					<p class="text-center"><button class="btn btn-primary radius-5">Save</button></p>
 				</div>
 			</div>
-			<!--------------End sửa student------------>						
+			<!--------------End sửa student------------>
+			<!--------------Chi tiet sinh vien-------------->
+			<div class="tab-pane" role="tabpanel" id="tab-6">
+				<div class="student-name" style="background: #dedede;">
+					<h3><span id="studentName">Nguyễn Văn A - </span><span id="studentID">51101111</span></h3>
+				</div> 
+				<h4>Danh sách doanh nghiệp sinh viên đã đăng ký</h4>				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table id="" class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr class="bg-primary">
+										<th>Số thứ tự</th>
+										<th>Tên Doanh Nghiệp</th>																
+										<th>Deadline ứng tuyển</th>									
+										<th>Deadline chọn doanh nghiệp</th>
+										<th>Doanh nghiệp chấp nhận?</th>
+										<th>Sinh viên chấp nhận?</th>
+									</tr>
+								</thead>
+								<tbody id="tableChiTietSV">
+									<tr data-toggle="popover3">
+										<td>001</td>
+										<td>FPT</td>										
+										<td>28/05/2018</td>
+										<td>10/06/2018</td>
+										<td>Chưa</td>
+										<td>Chưa</td>																			
+									</tr>
+									<tr data-toggle="popover3">
+										<td>002</td>
+										<td>MangoAds</td>										
+										<td>28/05/2018</td>
+										<td>12/06/2018</td>
+										<td>Chưa</td>
+										<td>Chưa</td>																			
+									</tr>
+									<tr data-toggle="popover3">
+										<td>003</td>
+										<td>VNG</td>										
+										<td>29/05/2018</td>
+										<td>12/06/2018</td>
+										<td>Rồi</td>
+										<td>Chưa</td>																			
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------End chi tiet sinh vien------------>
+			<!--------------Chi tiet doanh nghiep-------------->
+			<div class="tab-pane" role="tabpanel" id="tab-7">
+				<div class="student-name" style="background: #dedede;">
+					<h3><span id="companyName">FPT</span></h3>
+				</div> 
+				<h4>Danh sách sinh viên đã đăng ký</h4>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table id="" class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr class="bg-primary">
+										<th>Số thứ tự</th>
+										<th>Mã số sinh viên</th>
+										<th>Họ Tên</th>
+										<th>Doanh nghiệp chấp nhận?</th>
+										<th>Sinh viên chấp nhận?									
+									</tr>
+								</thead>
+								<tbody id="tableChiTietDN">
+									<tr data-toggle="popover">
+										<td>001</td>
+										<td>51101111</td>
+										<td>Nguyễn Văn A</td>
+										<td>Chưa</td>
+										<td>Chưa</td>																	
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>Rồi</td>
+										<td>Rồi</td>																	
+									</tr>
+									<tr data-toggle="popover">
+										<td>003</td>
+										<td>51103333</td>
+										<td>Nguyễn Văn C</td>
+										<td>Rồi</td>
+										<td>Chưa</td>																	
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------End chi tiet doanh nghiep------------>						
 		</div>
 	</div>
 	<!--------------EndHorizontalTabPanel-------------->
-</div>
 
 	<script>
 	// Get the modal

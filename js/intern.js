@@ -9,7 +9,7 @@ $(document).ready(function(){
     	$("#select").append("<option>"+name+"</option>");
     });
 
-    $('#remove').click(function(){
+    $('#delete').click(function(){
     	$("#select option:selected").remove();
     });
 
@@ -18,4 +18,7 @@ $(document).ready(function(){
         $("#select option:selected").val(a);
     });
 
+    $('#create').click(function(){
+        $("#select option:selected").remove();
+    });
 });
