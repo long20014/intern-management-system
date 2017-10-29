@@ -2,6 +2,29 @@
 @import "helpers/variables"; 
 
 .own-style {
+	.row {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+
+	.row > [class*='col-'] {
+	  display: flex;
+	  flex-direction: column;
+	  align-self: center;
+	}
+
+	.row > [class*='col-'] img {  
+	  align-self: center;
+	}
+
+
+	td > select {
+		height: 25px;
+	}
+
 	.container {
 		position: relative;
 		max-width: 1200px;
@@ -35,8 +58,77 @@
 		}
 	} 
 
-	/* Full-width input fields */
-	
+	.btn-download {
+		font-size: 11px;
+		text-transform: none;
+	    padding: 0 10px;
+	    height: 20px;
+	    line-height: 20px;
+	}
+
+	.btn-find {
+		height: 34px;
+		border-radius: 0px 4px 4px 0px;
+	}
+
+  .form-modified {
+    background-color:#131720;
+    margin: 0 auto;
+    max-width:400px;
+    padding:50px 40px;
+  }
+
+  .input-sm {
+    background-color:rgba(0,0,0,0.0);
+    border-color:#282D36;
+  }
+
+  .btn-primary {
+  	background-color: $colorPrimary;
+  }
+
+  .btn-secondary {
+  	background-color: $colorSecondary;
+  	color: white;
+  }
+
+  .color-white      { color: white; }
+  .color-black      { color: #575757; }  
+  .color-gray       { color: #777; }
+  .color-light-gray { color: #e7e7e7; }
+  .color-cyan       { color: #34d2ff; }
+  .color-primary    { color: $colorPrimary; }
+
+  .font-w-300 { font-weight:300; }
+  .font-w-400 { font-weight:400; }
+  .font-w-500 { font-weight:500; }
+  .font-w-600 { font-weight:600; }
+  .font-w-700 { font-weight:700; }
+
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   #777;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #777;
+   opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #777;
+   opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #777;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #777;
+  }
+
+
+
+
+
+
 
 	/* Set a style for all buttons */
 	
@@ -44,11 +136,7 @@
 	    opacity: 0.8;
 	}
 
-	/* Extra styles for the cancel button */
-	
-
-	/* Center the image and position the close button */
-	
+		
 	span.psw {
 	    float: right;
 	    padding-top: 16px;
@@ -118,53 +206,5 @@
 	    .cancelbtn {
 	       width: 100%;
 	    }
-	}
-
-  .form-modified {
-    background-color:#131720;
-    margin: 0 auto;
-    max-width:400px;
-    padding:50px 40px;
-  }
-
-  .input-sm {
-    background-color:rgba(0,0,0,0.0);
-    border-color:#282D36;
-  }
-
-  .btn-primary {
-  	background-color: $colorPrimary;
-  }
-
-  .color-white      { color: white; }
-  .color-black      { color: #575757; }  
-  .color-gray       { color: #777; }
-  .color-light-gray { color: #e7e7e7; }
-  .color-cyan       { color: #34d2ff; }
-  .color-primary    { color: $colorPrimary; }
-
-  .font-w-300 { font-weight:300; }
-  .font-w-400 { font-weight:400; }
-  .font-w-500 { font-weight:500; }
-  .font-w-600 { font-weight:600; }
-  .font-w-700 { font-weight:700; }
-
-
-  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:   #777;
-  }
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #777;
-   opacity:  1;
-  }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #777;
-   opacity:  1;
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #777;
-  }
-  ::-ms-input-placeholder { /* Microsoft Edge */
-   color:    #777;
-  }  
+	}  
 }

@@ -1,9 +1,6 @@
 /* line 4, ../scss/themes/_own-style.scss */
 .own-style {
-  /* Full-width input fields */
   /* Set a style for all buttons */
-  /* Extra styles for the cancel button */
-  /* Center the image and position the close button */
   /* The Modal (background) */
   /* Modal Content/Box */
   /* The Close Button (x) */
@@ -11,46 +8,173 @@
   /* Change styles for span and cancel button on extra small screens */
 }
 /* line 5, ../scss/themes/_own-style.scss */
+.own-style .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 13, ../scss/themes/_own-style.scss */
+.own-style .row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+/* line 19, ../scss/themes/_own-style.scss */
+.own-style .row > [class*='col-'] img {
+  align-self: center;
+}
+/* line 24, ../scss/themes/_own-style.scss */
+.own-style td > select {
+  height: 25px;
+}
+/* line 28, ../scss/themes/_own-style.scss */
 .own-style .container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px 0;
 }
-/* line 12, ../scss/themes/_own-style.scss */
+/* line 35, ../scss/themes/_own-style.scss */
 .own-style .container-fluid {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 0;
 }
-/* line 19, ../scss/themes/_own-style.scss */
+/* line 42, ../scss/themes/_own-style.scss */
 .own-style .login-bar {
   margin: 0 auto;
   background-color: #dedede;
   width: 100%;
   height: 50px;
 }
-/* line 27, ../scss/themes/_own-style.scss */
+/* line 50, ../scss/themes/_own-style.scss */
 .own-style .choice :hover {
   border: 2px solid #61b1f6;
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #67b168;
 }
-/* line 32, ../scss/themes/_own-style.scss */
+/* line 55, ../scss/themes/_own-style.scss */
 .own-style .choice a:hover {
   border: none;
   box-shadow: none;
 }
-/* line 43, ../scss/themes/_own-style.scss */
+/* line 61, ../scss/themes/_own-style.scss */
+.own-style .btn-download {
+  font-size: 11px;
+  text-transform: none;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 69, ../scss/themes/_own-style.scss */
+.own-style .btn-find {
+  height: 34px;
+  border-radius: 0px 4px 4px 0px;
+}
+/* line 74, ../scss/themes/_own-style.scss */
+.own-style .form-modified {
+  background-color: #131720;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 50px 40px;
+}
+/* line 81, ../scss/themes/_own-style.scss */
+.own-style .input-sm {
+  background-color: transparent;
+  border-color: #282D36;
+}
+/* line 86, ../scss/themes/_own-style.scss */
+.own-style .btn-primary {
+  background-color: #F8AD1A;
+}
+/* line 90, ../scss/themes/_own-style.scss */
+.own-style .btn-secondary {
+  background-color: #07569a;
+  color: white;
+}
+/* line 95, ../scss/themes/_own-style.scss */
+.own-style .color-white {
+  color: white;
+}
+/* line 96, ../scss/themes/_own-style.scss */
+.own-style .color-black {
+  color: #575757;
+}
+/* line 97, ../scss/themes/_own-style.scss */
+.own-style .color-gray {
+  color: #777;
+}
+/* line 98, ../scss/themes/_own-style.scss */
+.own-style .color-light-gray {
+  color: #e7e7e7;
+}
+/* line 99, ../scss/themes/_own-style.scss */
+.own-style .color-cyan {
+  color: #34d2ff;
+}
+/* line 100, ../scss/themes/_own-style.scss */
+.own-style .color-primary {
+  color: #F8AD1A;
+}
+/* line 102, ../scss/themes/_own-style.scss */
+.own-style .font-w-300 {
+  font-weight: 300;
+}
+/* line 103, ../scss/themes/_own-style.scss */
+.own-style .font-w-400 {
+  font-weight: 400;
+}
+/* line 104, ../scss/themes/_own-style.scss */
+.own-style .font-w-500 {
+  font-weight: 500;
+}
+/* line 105, ../scss/themes/_own-style.scss */
+.own-style .font-w-600 {
+  font-weight: 600;
+}
+/* line 106, ../scss/themes/_own-style.scss */
+.own-style .font-w-700 {
+  font-weight: 700;
+}
+/* line 109, ../scss/themes/_own-style.scss */
+.own-style ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #777;
+}
+/* line 112, ../scss/themes/_own-style.scss */
+.own-style :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #777;
+  opacity: 1;
+}
+/* line 116, ../scss/themes/_own-style.scss */
+.own-style ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #777;
+  opacity: 1;
+}
+/* line 120, ../scss/themes/_own-style.scss */
+.own-style :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #777;
+}
+/* line 123, ../scss/themes/_own-style.scss */
+.own-style ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #777;
+}
+/* line 135, ../scss/themes/_own-style.scss */
 .own-style button:hover {
   opacity: 0.8;
 }
-/* line 52, ../scss/themes/_own-style.scss */
+/* line 140, ../scss/themes/_own-style.scss */
 .own-style span.psw {
   float: right;
   padding-top: 16px;
 }
-/* line 58, ../scss/themes/_own-style.scss */
+/* line 146, ../scss/themes/_own-style.scss */
 .own-style .modal {
   display: none;
   /* Hidden by default */
@@ -72,7 +196,7 @@
   /* Black w/ opacity */
   padding-top: 60px;
 }
-/* line 73, ../scss/themes/_own-style.scss */
+/* line 161, ../scss/themes/_own-style.scss */
 .own-style .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
@@ -81,7 +205,7 @@
   width: 80%;
   /* Could be more or less, depending on screen size */
 }
-/* line 81, ../scss/themes/_own-style.scss */
+/* line 169, ../scss/themes/_own-style.scss */
 .own-style .close {
   position: absolute;
   right: 25px;
@@ -90,13 +214,13 @@
   font-size: 35px;
   font-weight: bold;
 }
-/* line 90, ../scss/themes/_own-style.scss */
+/* line 178, ../scss/themes/_own-style.scss */
 .own-style .close:hover,
 .own-style .close:focus {
   color: red;
   cursor: pointer;
 }
-/* line 97, ../scss/themes/_own-style.scss */
+/* line 185, ../scss/themes/_own-style.scss */
 .own-style .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -118,102 +242,15 @@
   }
 }
 @media screen and (max-width: 300px) {
-  /* line 114, ../scss/themes/_own-style.scss */
+  /* line 202, ../scss/themes/_own-style.scss */
   .own-style span.psw {
     display: block;
     float: none;
   }
-  /* line 118, ../scss/themes/_own-style.scss */
+  /* line 206, ../scss/themes/_own-style.scss */
   .own-style .cancelbtn {
     width: 100%;
   }
-}
-/* line 123, ../scss/themes/_own-style.scss */
-.own-style .form-modified {
-  background-color: #131720;
-  margin: 0 auto;
-  max-width: 400px;
-  padding: 50px 40px;
-}
-/* line 130, ../scss/themes/_own-style.scss */
-.own-style .input-sm {
-  background-color: transparent;
-  border-color: #282D36;
-}
-/* line 135, ../scss/themes/_own-style.scss */
-.own-style .btn-primary {
-  background-color: #F8AD1A;
-}
-/* line 139, ../scss/themes/_own-style.scss */
-.own-style .color-white {
-  color: white;
-}
-/* line 140, ../scss/themes/_own-style.scss */
-.own-style .color-black {
-  color: #575757;
-}
-/* line 141, ../scss/themes/_own-style.scss */
-.own-style .color-gray {
-  color: #777;
-}
-/* line 142, ../scss/themes/_own-style.scss */
-.own-style .color-light-gray {
-  color: #e7e7e7;
-}
-/* line 143, ../scss/themes/_own-style.scss */
-.own-style .color-cyan {
-  color: #34d2ff;
-}
-/* line 144, ../scss/themes/_own-style.scss */
-.own-style .color-primary {
-  color: #F8AD1A;
-}
-/* line 146, ../scss/themes/_own-style.scss */
-.own-style .font-w-300 {
-  font-weight: 300;
-}
-/* line 147, ../scss/themes/_own-style.scss */
-.own-style .font-w-400 {
-  font-weight: 400;
-}
-/* line 148, ../scss/themes/_own-style.scss */
-.own-style .font-w-500 {
-  font-weight: 500;
-}
-/* line 149, ../scss/themes/_own-style.scss */
-.own-style .font-w-600 {
-  font-weight: 600;
-}
-/* line 150, ../scss/themes/_own-style.scss */
-.own-style .font-w-700 {
-  font-weight: 700;
-}
-/* line 153, ../scss/themes/_own-style.scss */
-.own-style ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #777;
-}
-/* line 156, ../scss/themes/_own-style.scss */
-.own-style :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #777;
-  opacity: 1;
-}
-/* line 160, ../scss/themes/_own-style.scss */
-.own-style ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #777;
-  opacity: 1;
-}
-/* line 164, ../scss/themes/_own-style.scss */
-.own-style :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #777;
-}
-/* line 167, ../scss/themes/_own-style.scss */
-.own-style ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #777;
 }
 
 /* line 1, ../scss/themes/_padding-margin.scss */

@@ -20,80 +20,14 @@
 		</div>
 	</header>
 
-	<!--<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-
-				</div>
-				
-				<div class="col-md-8">
-					<form style="max-width: 400px">
-						<p class="text-center"><input id="newCompanyUser" class="input input-sm radius-5 color-gray" placeholder="Username" type="text" required></p>
-						<p class="text-center"><button type="button" onclick="addUserCompany()" class="btn btn-large btn-info radius-5 mt-10">Add new user</button></p>
-					</form>					
-					
-					
-					<form class="mt-20" style="max-width: 400px;">
-						<select id="companyUserSelect" size="8" style="width: 400px">
-						  <option value="volvo">FPT</option>
-						  <option value="saab">VNG</option>
-						  <option value="opel">MangoAds</option>
-						  <option value="audi">Intel</option>
-						</select>
-						
-						<div class="row">
-							<div class="col-md-6">
-								<p class="text-center"><button type="button" onclick="document.getElementById('edit-user').style.display='block'" class="btn btn-primary radius-5 mt-10" style="width: 150px;">edit</button></p>
-							</div>
-
-							<div class="col-md-6">
-								<p class="text-center"><button type="button" onclick="removeUserCompany()" class="btn btn-primary radius-5 mt-10" style="width: 150px;">remove</button></p>
-							</div>
-						</div>
-						
-					</form>		
-				</div>	
-			</div>
-		</div>
-
-		<div id="edit-user" class="modal">
-			<form class="radius-5 form-modified animate" action="/action_page.php">
-				<div class="text-center mb-30" >
-					<h2 class="font-w-300 fs-42 color-white ">Edit User</h2>
-					<p class="text-center color-gray fs-17 line-h ">Process results from a change in the energy level of the nucleus</p>			
-				</div>
-			  	
-			  	<p class="m-0"><input class="input input-sm w-full radius-5 color-white mb-20" placeholder="Username" type="text" disabled></p>
-			  	
-				<p class="m-0"><input class="input input-sm w-full radius-5 color-white	mb-20" placeholder="Password" type="password" required></p>
-
-				<p class="m-0">Deadline: <input type="date" name="bday"></p>
-
-				<div class="mb-20">
-					<label class="checkbox">
-					  <input type="checkbox">
-					  <span></span>
-						Disable user
-					</label>
-					<div class="row mt-20">
-						<div class="col-sm-6">
-							<button type="button" onclick="" class="btn btn-sm btn-primary radius-5" style="width:150px;">Save</button>
-						</div>
-						<div class="col-sm-6">
-							<button type="button" onclick="document.getElementById('edit-user').style.display='none'" class="btn btn-sm btn-primary radius-5" style="width:150px;">Cancel</button>
-						</div>
-					</div>						
-				</div>		  		  			  	
-			</form>
-		</div>
-	</section>-->
+	
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu">
 		<div class="btn-group btn-group-xs" role="group" >
-			<button id="" type="button" class="btn btn-sm btnView btn-success1">View</button>
-			<button id="" type="button" class="btn btn-sm btnEdit btn-primary1">Edit</button>
-			<button id="delete" type="button" class="btn btn-sm btnDelete btn-danger1">Delete</button>
+			<button id="" type="button" class="btn btn-sm btnView btn-success1">Xem</button>
+			<button id="" type="button" class="btn btn-sm btnEdit btn-primary1">Sửa</button>
+			<button id="delete" type="button" class="btn btn-sm btnDelete btn-danger1">Xoá</button>
+			<button id="delete" type="button" class="btn btn-sm btnDeleteAll btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------->
@@ -101,9 +35,10 @@
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu2">
 		<div class="btn-group btn-group-xs" role="group" >
-			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">View</button>
-			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Edit</button>
-			<button id="delete" type="button" class="btn btn-sm btnDelete2 btn-danger1">Delete</button>
+			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">Xem</button>
+			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Sửa</button>
+			<button id="delete" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
+			<button id="delete" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------->
@@ -133,7 +68,7 @@
 								<div class="input-group-addon"><span>User</span></div>
 								<input class="form-control" type="text" name="txtHoten">
 								<div class="input-group-btn">
-									<button class="btn btn-xs btn-info" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
+									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
 							</div>
 						</form>
@@ -190,7 +125,7 @@
 								<div class="input-group-addon"><span>User</span></div>
 								<input class="form-control" type="text" name="txtHoten">
 								<div class="input-group-btn">
-									<button class="btn btn-xs btn-info" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
+									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
 							</div>
 						</form>
@@ -247,7 +182,7 @@
 				
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
-					<select id="userType" style="border-radius: 0 5px 5px 0;">
+					<select id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
 						<option>Sinh viên</option>
 						<option>Doanh nghiệp</option>	
 					</select>
@@ -259,41 +194,15 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class="text-center"><button id="create" class="btn btn-primary radius-5">Create</button></p>
+					<p class="text-center"><button id="create" class="btn btn-primary radius-5">Tạo mới</button></p>
 				</div>
 				
-				
-
-
-
-				<!--<div class="form-group col-lg-6">
-					<label>Repeat Password</label>
-					<input name="" class="form-control" id="" value="" type="password">
-				</div>
-								
-				<div class="form-group col-lg-6">
-					<label>Email Address</label>
-					<input name="" class="form-control" id="" value="" type="">
-				</div>
-				
-				<div class="form-group col-lg-6">
-					<label>Repeat Email Address</label>
-					<input name="" class="form-control" id="" value="" type="">
-				</div>			
-				
-				<div class="col-sm-6">
-					<input class="checkbox" type="checkbox">Sigh up for our newsletter
-				</div>
-
-				<div class="col-sm-6">
-					<input class="checkbox" type="checkbox">Send notifications to this email
-				</div>-->			
 			</div>
 		
 			<!--------------End_Them_User------------>	
 			<!--------------Sửa student------------>
 			<div class="tab-pane" role="tabpanel" id="tab-4" style="margin: 0 auto; max-width: 600px">
-				<h3>Edit student</h3>
+				<h3>Hiệu chỉnh sinh viên</h3>
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
@@ -304,6 +213,11 @@
 					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
 					<input name="" class="form-control" id="" value="" type="text">
 				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Số lượng DN tối đa</span></div>
+					<input class="form-control" type="number" style="" min="0" max="100" required value="0" >
+				</div>	
 				
 				<div class="form-group">
 					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
@@ -312,16 +226,16 @@
 
 				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
-				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+				<div class="form-group">Deadline SV chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
 				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Save</button></p>
+					<p class="text-center"><button class="btn btn-primary radius-5">Lưu</button></p>
 				</div>
 			</div>
 			<!--------------End sửa student------------>
 			<!--------------Sửa doanh nghiệp------------>
 			<div class="tab-pane" role="tabpanel" id="tab-5" style="margin: 0 auto; max-width: 600px">
-				<h3>Edit company</h3>
+				<h3>Hiệu chỉnh doanh nghiệp</h3>
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>User</span></div>
@@ -349,7 +263,7 @@
 			<!--------------End sửa student------------>
 			<!--------------Chi tiet sinh vien-------------->
 			<div class="tab-pane" role="tabpanel" id="tab-6">
-				<div class="student-name" style="background: #dedede;">
+				<div class="infoDiv" style="background: #dedede;">
 					<h3><span id="studentName">Nguyễn Văn A - </span><span id="studentID">51101111</span></h3>
 				</div> 
 				<h4>Danh sách doanh nghiệp sinh viên đã đăng ký</h4>				
@@ -401,10 +315,10 @@
 			<!--------------End chi tiet sinh vien------------>
 			<!--------------Chi tiet doanh nghiep-------------->
 			<div class="tab-pane" role="tabpanel" id="tab-7">
-				<div class="student-name" style="background: #dedede;">
+				<div class="infoDiv" style="background: #dedede;">
 					<h3><span id="companyName">FPT</span></h3>
 				</div> 
-				<h4>Danh sách sinh viên đã đăng ký</h4>
+				<h4>Danh sách sinh viên ứng tuyển</h4>
 
 				<div class="row">
 					<div class="col-md-12">
@@ -450,36 +364,11 @@
 			<!--------------End chi tiet doanh nghiep------------>						
 		</div>
 	</div>
-	<!--------------EndHorizontalTabPanel-------------->
-
-	<script>
-	// Get the modal
-	var modal1 = document.getElementById("edit-user");
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	    if (event.target == modal1) {
-	        modal1.style.display = "none";
-	    }
-	}
-
-	function addUserCompany() {
-	    var x = document.getElementById("companyUserSelect");
-	    var option = document.createElement("option");	    
-	    option.text = document.getElementById("newCompanyUser").value;	   
-    	x.add(option);
-	    }
-
-	function removeUserCompany() {
-    var x = document.getElementById("companyUserSelect");
-    x.remove(x.selectedIndex);
-}
-	</script>
+	<!--------------EndHorizontalTabPanel-------------->	
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/library.js"></script>
 	<script src="js/settings.js"></script>
 	<script src="js/dustin.js"></script>
-
 </body>
 </html>
