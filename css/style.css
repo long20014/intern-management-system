@@ -15,52 +15,94 @@
   display: flex;
   flex-wrap: wrap;
 }
-/* line 13, ../scss/themes/_own-style.scss */
+/* line 17, ../scss/themes/_own-style.scss */
 .own-style .row > [class*='col-'] {
   display: flex;
   flex-direction: column;
   align-self: center;
 }
-/* line 19, ../scss/themes/_own-style.scss */
+/* line 23, ../scss/themes/_own-style.scss */
 .own-style .row > [class*='col-'] img {
   align-self: center;
 }
-/* line 24, ../scss/themes/_own-style.scss */
+/* line 28, ../scss/themes/_own-style.scss */
 .own-style td > select {
   height: 25px;
 }
-/* line 28, ../scss/themes/_own-style.scss */
+/* line 36, ../scss/themes/_own-style.scss */
 .own-style .container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 15px 15px;
 }
-/* line 35, ../scss/themes/_own-style.scss */
+/* line 43, ../scss/themes/_own-style.scss */
 .own-style .container-fluid {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 0;
 }
-/* line 42, ../scss/themes/_own-style.scss */
+/* line 50, ../scss/themes/_own-style.scss */
 .own-style .login-bar {
   margin: 0 auto;
   background-color: #dedede;
   width: 100%;
   height: 50px;
 }
-/* line 50, ../scss/themes/_own-style.scss */
-.own-style .choice :hover {
-  border: 2px solid #61b1f6;
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #67b168;
+/* line 57, ../scss/themes/_own-style.scss */
+.own-style .choice {
+  position: relative;
+  height: 200px;
+  width: 275px;
+  border: 2px solid gray;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0 auto;
 }
-/* line 55, ../scss/themes/_own-style.scss */
+/* line 66, ../scss/themes/_own-style.scss */
 .own-style .choice a:hover {
   border: none;
   box-shadow: none;
 }
-/* line 61, ../scss/themes/_own-style.scss */
+/* line 71, ../scss/themes/_own-style.scss */
+.own-style .choice .logo-container {
+  padding: 20px;
+  height: 176px;
+  line-height: 128px;
+  align-items: center;
+  justify-content: center;
+}
+/* line 78, ../scss/themes/_own-style.scss */
+.own-style .choice .logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+/* line 88, ../scss/themes/_own-style.scss */
+.own-style .choice:hover {
+  border: 2px solid #61b1f6;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #67b168;
+}
+/* line 93, ../scss/themes/_own-style.scss */
+.own-style .company-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-color: #337ab7;
+  border-top: 1px solid gray;
+  color: white;
+}
+/* line 103, ../scss/themes/_own-style.scss */
+.own-style .company-name :hover {
+  border: none;
+  box-shadow: none;
+}
+/* line 109, ../scss/themes/_own-style.scss */
 .own-style .btn-download {
   font-size: 11px;
   text-transform: none;
@@ -68,113 +110,113 @@
   height: 20px;
   line-height: 20px;
 }
-/* line 69, ../scss/themes/_own-style.scss */
+/* line 117, ../scss/themes/_own-style.scss */
 .own-style .btn-find {
   height: 34px;
   border-radius: 0px 4px 4px 0px;
 }
-/* line 74, ../scss/themes/_own-style.scss */
+/* line 122, ../scss/themes/_own-style.scss */
 .own-style .form-modified {
   background-color: #131720;
   margin: 0 auto;
   max-width: 400px;
   padding: 50px 40px;
 }
-/* line 81, ../scss/themes/_own-style.scss */
+/* line 129, ../scss/themes/_own-style.scss */
 .own-style .input-sm {
   background-color: transparent;
   border-color: #282D36;
 }
-/* line 86, ../scss/themes/_own-style.scss */
+/* line 134, ../scss/themes/_own-style.scss */
 .own-style .btn-primary {
   background-color: #F8AD1A;
 }
-/* line 90, ../scss/themes/_own-style.scss */
+/* line 138, ../scss/themes/_own-style.scss */
 .own-style .btn-secondary {
   background-color: #07569a;
   color: white;
 }
-/* line 95, ../scss/themes/_own-style.scss */
+/* line 143, ../scss/themes/_own-style.scss */
 .own-style .color-white {
   color: white;
 }
-/* line 96, ../scss/themes/_own-style.scss */
+/* line 144, ../scss/themes/_own-style.scss */
 .own-style .color-black {
   color: #575757;
 }
-/* line 97, ../scss/themes/_own-style.scss */
+/* line 145, ../scss/themes/_own-style.scss */
 .own-style .color-gray {
   color: #777;
 }
-/* line 98, ../scss/themes/_own-style.scss */
+/* line 146, ../scss/themes/_own-style.scss */
 .own-style .color-light-gray {
   color: #e7e7e7;
 }
-/* line 99, ../scss/themes/_own-style.scss */
+/* line 147, ../scss/themes/_own-style.scss */
 .own-style .color-cyan {
   color: #34d2ff;
 }
-/* line 100, ../scss/themes/_own-style.scss */
+/* line 148, ../scss/themes/_own-style.scss */
 .own-style .color-primary {
   color: #F8AD1A;
 }
-/* line 102, ../scss/themes/_own-style.scss */
+/* line 150, ../scss/themes/_own-style.scss */
 .own-style .font-w-300 {
   font-weight: 300;
 }
-/* line 103, ../scss/themes/_own-style.scss */
+/* line 151, ../scss/themes/_own-style.scss */
 .own-style .font-w-400 {
   font-weight: 400;
 }
-/* line 104, ../scss/themes/_own-style.scss */
+/* line 152, ../scss/themes/_own-style.scss */
 .own-style .font-w-500 {
   font-weight: 500;
 }
-/* line 105, ../scss/themes/_own-style.scss */
+/* line 153, ../scss/themes/_own-style.scss */
 .own-style .font-w-600 {
   font-weight: 600;
 }
-/* line 106, ../scss/themes/_own-style.scss */
+/* line 154, ../scss/themes/_own-style.scss */
 .own-style .font-w-700 {
   font-weight: 700;
 }
-/* line 109, ../scss/themes/_own-style.scss */
+/* line 157, ../scss/themes/_own-style.scss */
 .own-style ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #777;
 }
-/* line 112, ../scss/themes/_own-style.scss */
+/* line 160, ../scss/themes/_own-style.scss */
 .own-style :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #777;
   opacity: 1;
 }
-/* line 116, ../scss/themes/_own-style.scss */
+/* line 164, ../scss/themes/_own-style.scss */
 .own-style ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #777;
   opacity: 1;
 }
-/* line 120, ../scss/themes/_own-style.scss */
+/* line 168, ../scss/themes/_own-style.scss */
 .own-style :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #777;
 }
-/* line 123, ../scss/themes/_own-style.scss */
+/* line 171, ../scss/themes/_own-style.scss */
 .own-style ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #777;
 }
-/* line 135, ../scss/themes/_own-style.scss */
+/* line 183, ../scss/themes/_own-style.scss */
 .own-style button:hover {
   opacity: 0.8;
 }
-/* line 140, ../scss/themes/_own-style.scss */
+/* line 188, ../scss/themes/_own-style.scss */
 .own-style span.psw {
   float: right;
   padding-top: 16px;
 }
-/* line 146, ../scss/themes/_own-style.scss */
+/* line 194, ../scss/themes/_own-style.scss */
 .own-style .modal {
   display: none;
   /* Hidden by default */
@@ -196,7 +238,7 @@
   /* Black w/ opacity */
   padding-top: 60px;
 }
-/* line 161, ../scss/themes/_own-style.scss */
+/* line 209, ../scss/themes/_own-style.scss */
 .own-style .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
@@ -205,7 +247,7 @@
   width: 80%;
   /* Could be more or less, depending on screen size */
 }
-/* line 169, ../scss/themes/_own-style.scss */
+/* line 217, ../scss/themes/_own-style.scss */
 .own-style .close {
   position: absolute;
   right: 25px;
@@ -214,13 +256,13 @@
   font-size: 35px;
   font-weight: bold;
 }
-/* line 178, ../scss/themes/_own-style.scss */
+/* line 226, ../scss/themes/_own-style.scss */
 .own-style .close:hover,
 .own-style .close:focus {
   color: red;
   cursor: pointer;
 }
-/* line 185, ../scss/themes/_own-style.scss */
+/* line 233, ../scss/themes/_own-style.scss */
 .own-style .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -242,12 +284,12 @@
   }
 }
 @media screen and (max-width: 300px) {
-  /* line 202, ../scss/themes/_own-style.scss */
+  /* line 250, ../scss/themes/_own-style.scss */
   .own-style span.psw {
     display: block;
     float: none;
   }
-  /* line 206, ../scss/themes/_own-style.scss */
+  /* line 254, ../scss/themes/_own-style.scss */
   .own-style .cancelbtn {
     width: 100%;
   }

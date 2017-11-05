@@ -8,7 +8,7 @@
   	<title>BK Intern management system - Admin</title>
   	<link href="css/style.css" rel="stylesheet" >
   	<link href="css/bootstrap.min.css" rel="stylesheet">
-  	<link href="css/fontawesome.min.css" rel="stylesheet">
+  	<link href="css/font-awesome.min.css" rel="stylesheet">
   	<link href="css/nav_dropdown.css" rel="stylesheet" type="text/css" >
 </head>
 
@@ -16,6 +16,7 @@
 	<header id="header" class="container-fluid">
 		<div class="login-bar">
 			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
+
 			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
 		</div>
 	</header>
@@ -41,22 +42,22 @@
 			<button id="delete" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
 		</div>
 	</div>
-	<!-------End popover button template------->
-
-
-	<div class="container-fluid">
+	<!-------End popover button template------>
+	<div>
+		<h3 class="text-center">Trang admin</h3>	
+	</div>
 	
 	<!--------------HorizontalTabPanel-------------->
 	<div class="panel with-nav-tabs panel-info">
 		<a href="#" class="nav-tabs-dropdown btn btn-block btn-success">Tabs</a>
 		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
 			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên</a></li>
-			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Danh sách doanh nghiệp </a></li>			
-			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm người dùng</a></li>
+			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách doanh nghiệp </a></li>			
+			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Thêm người dùng</a></li>
 			<li><a href="#tab-4" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa sinh viên</a></li>
 			<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
-			<li><a href="#tab-6" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chi tiết sinh viên</a></li>
-			<li><a href="#tab-7" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chi tiết doanh nghiệp</a></li>
+			<li><a href="#tab-6" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i> Chi tiết sinh viên</a></li>
+			<li><a href="#tab-7" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i> Chi tiết doanh nghiệp</a></li>
 		</ul>
 		<div class="tab-content panel-body">
 			<!--------------Danh sach sinh vien-------------->
@@ -120,7 +121,7 @@
 			<div class="tab-pane" role="tabpanel" id="tab-2">
 				<div class="row">
 					<div class="col-md-12">
-						<form action="app/apiBenhNhan.php?mode=search" id="frmTimBenhNhan" method="post">
+						<form action="/" id="frmTimBenhNhan" method="post">
 							<div class="input-group input-group form-group">
 								<div class="input-group-addon"><span>User</span></div>
 								<input class="form-control" type="text" name="txtHoten">
@@ -175,28 +176,29 @@
 				
 				<h3>Registration</h3>
 
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
-					<input id="username" class="form-control" type="text" style=""/>
-				</div>				
-				
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
-					<select id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
-						<option>Sinh viên</option>
-						<option>Doanh nghiệp</option>	
-					</select>
-				</div>
+				<form action="app/apiBenhNhan.php?mode=search" id="createAccount" method="post">
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+						<input id="username" class="form-control" type="text" style=""/>
+					</div>				
+					
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
+						<select id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
+							<option>Sinh viên</option>
+							<option>Doanh nghiệp</option>	
+						</select>
+					</div>
 
-				<div class="form-group">
-					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
-					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
-				</div>
+					<div class="form-group">
+						<input class="" type="radio" name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio" name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+					</div>
 
-				<div class="form-group col-md-12">
-					<p class="text-center"><button id="create" class="btn btn-primary radius-5">Tạo mới</button></p>
-				</div>
-				
+					<div class="form-group col-md-12">
+						<p class="text-center"><button id="create" type="submit" class="btn btn-secondary radius-5"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button></p>
+					</div>
+				</form>				
 			</div>
 		
 			<!--------------End_Them_User------------>	
@@ -253,7 +255,11 @@
 				</div>
 
 				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin doanh nghiệp</textarea>  
+					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
+				</div>
+
+				<div class="form-group input-group col-md-12">					
+					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
 				</div>
 
 				<div class="form-group col-md-12">
@@ -370,5 +376,6 @@
 	<script src="js/library.js"></script>
 	<script src="js/settings.js"></script>
 	<script src="js/dustin.js"></script>
+	<script src="js/page-functions.js"></script>
 </body>
 </html>

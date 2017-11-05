@@ -22,7 +22,7 @@ $(function(){
         ev.preventDefault();
         var myForm = $(this),
             url = myForm.attr('action'),
-            method=myForm.attr('method'),
+            method = myForm.attr('method'),
             data = myForm.serialize();
             //console.log(data);
         $.ajax({

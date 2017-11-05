@@ -10,6 +10,10 @@
 	  flex-wrap: wrap;
 	}
 
+	img {
+
+	}
+
 	.row > [class*='col-'] {
 	  display: flex;
 	  flex-direction: column;
@@ -25,11 +29,15 @@
 		height: 25px;
 	}
 
+	.main-background {
+		//background-image: ;
+	}
+
 	.container {
 		position: relative;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 15px 0 ;
+		padding: 15px 15px ;
 	}
 
 	.container-fluid {
@@ -47,16 +55,56 @@
 	}
 	
 	.choice {
-		:hover {
-			border: 2px solid #61b1f6;
-			box-shadow: inset 0 2px 2px rgba(0,0,0,.075), 0 0 8px #67b168;
-		}
-
+		position: relative;
+		height: 200px;
+		width: 275px;
+		border: 2px solid gray;		
+		display: inline-block;
+		overflow: hidden;
+		border-radius: 5px;
+		margin: 0 auto;
 		a:hover {
 			border: none;
 			box-shadow: none;
 		}
-	} 
+
+		.logo-container {
+			padding: 20px;			
+			height: 176px;
+			line-height: 128px;
+			align-items: center;
+  			justify-content: center;
+
+			img {				
+				max-width: 100%;				
+				max-height: 100%;
+				display: flex;
+				margin: 0 auto;
+				
+			} 
+		}		
+	}
+
+	.choice:hover {
+		border: 2px solid #61b1f6;
+		box-shadow: inset 0 2px 2px rgba(0,0,0,.075), 0 0 8px #67b168;
+	}	
+
+	.company-name {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 24px;
+		background-color: #337ab7;
+		border-top: 1px solid gray;
+		color: white;
+
+		:hover {
+			border: none;
+			box-shadow: none;
+		}
+	}
 
 	.btn-download {
 		font-size: 11px;
