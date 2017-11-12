@@ -60,7 +60,7 @@
 		</div>
 
 		<div class="form-group col-md-12 mt-30">
-			<p class="text-center"><button id="register" class="btn btn-info radius-5">Đăng ký</button></p>
+			<p class="text-center"><button onclick="document.getElementById('id02').style.display='block'" id="register" class="btn btn-info radius-5">Đăng ký</button></p>
 		</div>		
 	</section>
 
@@ -86,16 +86,36 @@
 		</form>
 	</div>
 
+	<div id="id02" class="modal">  
+	  	<form class="radius-5 form-modified animate" action="/action_page.php">
+			<div class="text-center mb-30" >
+				<h2 class="font-w-300 fs-42 color-white ">Đăng ký</h2>
+				<p class="text-center color-gray fs-17 line-h ">Đăng ký doanh nghiệp</p>			
+			</div>
+
+		  	<p>(*)Tập tin CV gửi kèm</p>
+			<p><input type="file" name="pic" accept="image/*" style="display: inline-block"></p>
+ 			
+			<div class="mt-20">				
+				<p class="text-center"><button type="submit" class="btn btn-sm btn-primary radius-5" style="width:40%;max-width:200px;">Đăng ký</button></p>					
+			</div>		  		  			  	
+		</form>
+	</div>
+
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
+	var modal2 = document.getElementById('id02');
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 	    if (event.target == modal) {
 	        modal.style.display = "none";
 	    }
-	}
+	    else if (event.target == modal2) {
+	        modal2.style.display = "none";
+	    }
+	}	
 	</script>
 </body>
 </html>

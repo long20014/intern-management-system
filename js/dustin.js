@@ -18,7 +18,7 @@ $(function(){
 	/*--- Get cur_id and manipulate popover buttons ---*/
 
     /*--- frmTimBenhNhan ---*/
-    $("#frmTimBenhNhan").submit(function (ev) {
+    $("form").submit(function (ev) {
         ev.preventDefault();
         var myForm = $(this),
             url = myForm.attr('action'),
