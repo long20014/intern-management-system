@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html ⚡ lang="en">
-
-<head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  	<title>BK Intern management system - Admin</title>
-  	<link href="css/style.css" rel="stylesheet" >
-  	<link href="css/bootstrap.min.css" rel="stylesheet">
-  	<link href="css/font-awesome.min.css" rel="stylesheet">
-  	<link href="css/nav_dropdown.css" rel="stylesheet" type="text/css" >
-  	<link href="jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" >
-
-</head>
+<?php include 'head.php' ?>
 
 <body class="own-style own-margin">
 	<header id="header" class="container-fluid">
@@ -373,13 +359,6 @@
 		</div>
 	</div>
 	<!--------------EndHorizontalTabPanel-------------->	
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/library.js"></script>
-	<script src="js/settings.js"></script>
-	<script src="js/dustin.js"></script>
-	<script src="js/page-functions.js"></script>
-	<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
-	<script src="js/modernizr-custom.js"></script>
+	<?php include 'scripts.php' ?>
 </body>
 </html>

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html ⚡ lang="en">
-
-<head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  	<title>BK Intern management system - Home</title>
-  	<link href="css/style.css" rel="stylesheet">
-  	<link href="css/bootstrap.min.css" rel="stylesheet">
-  	<link href="css/fontawesome.min.css" rel="stylesheet">
-</head>
+<?php include 'head.php' ?>
 
 <body class="own-style own-margin">
 	<header id="header" class="container-fluid">
@@ -70,7 +59,7 @@
 					
 				<div class="col-lg-3 col-sm-6">
 					<div class="choice">						
-						<a href="VNG.html">
+						<a href="VNG.php">
 							<div class="logo-container">
 								<img src="images/vng-logo-share-v2.jpg">
 							</div>
