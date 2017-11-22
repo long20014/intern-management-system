@@ -38,7 +38,7 @@
 				</div>
 
 				<p>(*)Chọn hình ảnh logo</p>
-				<p><input type="file" name="pic" accept="image/*" style="display: inline-block"></span></p>
+				<p><input type="file" name="logo" accept="image/*" style="display: inline-block"></span></p>
 
 				<div class="form-group col-md-12 mt-20">
 					<p class="text-center"><button type="submit" class="btn btn-primary radius-5">Lưu</button></p>

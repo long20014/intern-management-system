@@ -26,12 +26,12 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>Họ & Tên</span></div>
-					<input class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="ho_ten" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>MSSV</span></div>
-					<input class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="ma_so_sv" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>
 
 				<div class="form-group">Ngày sinh<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>

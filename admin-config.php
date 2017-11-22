@@ -172,9 +172,9 @@
 					
 					<div class="form-group input-group col-md-12">
 						<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
-						<select id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
-							<option>Sinh viên</option>
-							<option>Doanh nghiệp</option>	
+						<select name="type" id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
+							<option value="student">Sinh viên</option>
+							<option value="company">Doanh nghiệp</option>	
 						</select>
 					</div>
 
@@ -196,17 +196,17 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
-					<input class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="user_sv" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>				
 											
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
-					<input name="" class="form-control" id="" value="" type="text">
+					<input name="ho_ten" class="form-control" id="" value="" type="text">
 				</div>
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>Số lượng DN tối đa</span></div>
-					<input class="form-control" type="number" style="" min="0" max="100" required value="0" >
+					<input name="sl_dn_doi_da" class="form-control" type="number" style="" min="0" max="100" required value="0" >
 				</div>	
 				
 				<div class="form-group">
@@ -214,9 +214,9 @@
 					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
 				</div>
 
-				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline_ung_tuyen" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
-				<div class="form-group">Deadline SV chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+				<div class="form-group">Deadline SV chọn doanh nghiệp <input type="date" name="deadline_chon_dn" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
 				<div class="form-group col-md-12">
 					<p class="text-center"><button class="btn btn-primary radius-5">Lưu</button></p>
@@ -229,18 +229,21 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>User</span></div>
-					<input class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="user_dn" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>				
 											
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>Doanh nghiệp</span></div>
-					<input name="" class="form-control" id="" value="" type="text">
+					<input name="ten_dn" class="form-control" id="" value="" type="text">
 				</div>
 
 				<div class="form-group">
 					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
 					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
 				</div>
+
+				<p>(*)Chọn hình ảnh logo</p>
+				<p><input type="file" name="logo" accept="image/*" style="display: inline-block"></span></p>
 
 				<div class="form-group input-group col-md-12">					
 					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
