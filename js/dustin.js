@@ -44,3 +44,28 @@ $(function(){
         });*/
     });
 });
+
+
+function appendJsonToTable(data){
+    //console.log(data);
+
+    let thu_tu = [
+        "id",
+        "ho_ten",
+        "gioi_tinh",
+        "nam_sinh",
+        "sdt",
+        "dia_chi",
+    ];
+    var $tableBody = $('<tbody>');
+    data.map(function (obj) {
+        var $tr = $('<tr data-toggle="popover"></tr>');
+        var $td;
+        for( var val of thu_tu ){
+            $td = $('<td>' +  obj[val] + '</td>');
+            $tr.append($td);
+        }
+        $tableBody.append($tr);
+    });
+    $("#tableBody").html($tableBody.html());
+}
