@@ -1,4 +1,13 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Student page</title>
+  	<?php include 'reference.php' ?>
+</head>
 
 <body class="own-style own-margin">
 	<header id="header" class="container-fluid">

@@ -1,4 +1,14 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Admin config</title>
+  	<?php include 'reference.php' ?>
+</head>
+
 
 <body class="own-style own-margin">
 	<header id="header" class="container-fluid">
@@ -16,7 +26,7 @@
 			<button id="" type="button" class="btn btn-sm btnView btn-success1">Xem</button>
 			<button id="" type="button" class="btn btn-sm btnEdit btn-primary1">Sửa</button>
 			<button id="delete" type="button" class="btn btn-sm btnDelete btn-danger1">Xoá</button>
-			<button id="delete" type="button" class="btn btn-sm btnDeleteAll btn-danger1">Xoá hết</button>
+			<button id="deleteAll" type="button" class="btn btn-sm btnDeleteAll btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------->
@@ -26,8 +36,8 @@
 		<div class="btn-group btn-group-xs" role="group" >
 			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">Xem</button>
 			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Sửa</button>
-			<button id="delete" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
-			<button id="delete" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
+			<button id="delete2" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
+			<button id="deleteAll2" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------>
@@ -55,7 +65,7 @@
 						<form action="app/apiBenhNhan.php?mode=search" id="frmTimBenhNhan" method="post">
 							<div class="input-group input-group form-group">
 								<div class="input-group-addon"><span>User</span></div>
-								<input class="form-control" type="text" name="txtHoten">
+								<input class="form-control" type="text" name="ho_ten">
 								<div class="input-group-btn">
 									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
@@ -112,7 +122,7 @@
 						<form action="/" id="frmTimBenhNhan" method="post">
 							<div class="input-group input-group form-group">
 								<div class="input-group-addon"><span>User</span></div>
-								<input class="form-control" type="text" name="txtHoten">
+								<input class="form-control" type="text" name="ten_dn">
 								<div class="input-group-btn">
 									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
@@ -179,8 +189,8 @@
 					</div>
 
 					<div class="form-group">
-						<input class="" type="radio" name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
-						<input class="" type="radio" name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+						<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
 					</div>
 
 					<div class="form-group col-md-12">
@@ -361,7 +371,22 @@
 			<!--------------End chi tiet doanh nghiep------------>						
 		</div>
 	</div>
-	<!--------------EndHorizontalTabPanel-------------->	
+	<!--------------EndHorizontalTabPanel-------------->
+	
+	<div id="confirm-alert" class="modal">  
+	  	<form class="radius-5 form-modified animate" action="/action_page.php">
+	  		<p class="text-center mt-20">Bạn muốn xoá hết dữ liệu</p>
+	  		<div class="row mt-30">
+	  			<div class="col-xs-6">
+	  				<button type="submit" class="btn btn-sm btn-primary radius-5" style="">Confirm</button>
+	  			</div>
+
+	  			<div class="col-xs-6">
+	  				<button type="submit" class="btn btn-sm btn-primary radius-5" style="">Cancel</button>
+	  			</div>
+	  		</div>				  		  			  	
+		</form>
+	</div>	
 	<?php include 'scripts.php' ?>
 </body>
 </html>

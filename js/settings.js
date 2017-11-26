@@ -68,7 +68,11 @@ function enablePopover(){
         });
 
         $('.btnDelete').click(function(){
-            //await implementation
+            $('#confirm-alert')
+        });
+
+        $('.btnDeleteAll').click(function(){
+            $('#confirm-alert').popup()
         });
 
     });
@@ -118,9 +122,12 @@ function enablePopover2(){
         });
 
         $('.btnDelete2').click(function(){
-            //await implementation
+            $('#confirm-alert')
         });
 
+        $('.btnDeleteAll2').click(function(){
+            $('#confirm-alert').hidden
+        });
     });
 }
 $(document).ready(enablePopover2());
