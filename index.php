@@ -144,6 +144,7 @@
 		</form>
 	</div>
 
+	<?php include 'footer.php' ?>	
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
